@@ -4,14 +4,16 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite o nome do aluno");
-        String nomeAluno = sc.nextLine();
-        System.out.println("Digite a maticula do aluno");
-        int matriculaAluno = sc.nextInt();
-        Aluno novoAluno = new Aluno();
-        novoAluno.setNome(nomeAluno);
-        novoAluno.setMatricula(matriculaAluno);
-        novoAluno.exibirInformaçoes();
+        System.out.println("Digite o nome da pessoa");
+        String nomePessoa = sc.nextLine();
+        System.out.println("Digite o CPF da pessoa");
+        String cpfPessoa = sc.nextLine();
+        Pessoa novaPessoa = new Pessoa(nomePessoa,cpfPessoa);
+        novaPessoa.exibeMensagem();
+        system.out.println("digite seu apelido");
+        String apelidoPessoa = sc.nextLine();
+        novaPessoa.exibirNomeApelido(apelidoPessoa);
+        System.out.println(novaPessoa.validaCPF(cpfPessoa));
         sc.close();
     }
 
